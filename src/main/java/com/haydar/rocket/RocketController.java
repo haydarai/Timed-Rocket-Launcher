@@ -35,7 +35,8 @@ class RocketController {
                         @Override
                         public void run() {
                             System.out.println(rocketSystem.ignite(nozzleId, pressure, time));
-                            commands.remove(c); // So that on test I can check the size of the ArrayList
+                            commands.remove(c); // Remove this from the command list after it's fired. so that I can
+                                                // check the size of the ArrayList to check how many commands remains
                         }
                     }, time * 1000);
                 } else if (splittedCommand[0].equalsIgnoreCase("shutoff")) {
@@ -46,7 +47,8 @@ class RocketController {
                         @Override
                         public void run() {
                             System.out.println(rocketSystem.shutOff(nozzleId, time));
-                            commands.remove(c); // So that on test I can check the size of the ArrayList
+                            commands.remove(c); // Remove this from the command list after it's shut off, so that I can
+                                                // check the size of the ArrayList to check how many commands remains
                         }
                     }, time * 1000);
                 }

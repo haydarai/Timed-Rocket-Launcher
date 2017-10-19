@@ -16,6 +16,10 @@ public class TestRocket {
         this.controller = new RocketController(rocketSystem, command);
     }
 
+    /**
+     * The idea of this test is by calculating how many available commands that isn't fired yet to indicate if
+     * everything's okay.
+     */
     @Test
     public void test() {
         try {
