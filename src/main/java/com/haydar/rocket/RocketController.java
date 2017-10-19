@@ -38,7 +38,7 @@ class RocketController {
                             commands.remove(c); // Remove this from the command list after it's fired. so that I can
                                                 // check the size of the ArrayList to check how many commands remains
                         }
-                    }, time * 1000);
+                    }, time * 1000); // Run the code at the provided delay time
                 } else if (splittedCommand[0].equalsIgnoreCase("shutoff")) {
                     int nozzleId = Integer.valueOf(splittedCommand[1]);
                     int time = Integer.valueOf(splittedCommand[3]);
@@ -50,7 +50,7 @@ class RocketController {
                             commands.remove(c); // Remove this from the command list after it's shut off, so that I can
                                                 // check the size of the ArrayList to check how many commands remains
                         }
-                    }, time * 1000);
+                    }, time * 1000); // Run the code at the provided delay time
                 }
             }
         } else {

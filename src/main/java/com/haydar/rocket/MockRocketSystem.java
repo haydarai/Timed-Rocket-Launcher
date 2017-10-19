@@ -4,6 +4,9 @@ public class MockRocketSystem implements IRocketSystem {
 
     @Override
     public String ignite(int nozzleId, int pressure, int time) {
+        /**
+         * Get whether it should be th, st, nd, or rd
+         */
         int remaining = nozzleId % 10;
         String ordinal = "th";
         if (remaining == 1) {
@@ -18,6 +21,9 @@ public class MockRocketSystem implements IRocketSystem {
 
     @Override
     public String shutOff(int nozzleId, int time) {
+        /**
+         * Get whether it should be th, st, nd, or rd
+         */
         int remaining = nozzleId % 10;
         String ordinal = "th";
         if (remaining == 1) {
