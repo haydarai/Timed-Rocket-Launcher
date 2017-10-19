@@ -51,6 +51,8 @@ class RocketController {
                     }, time * 1000);
                 }
             }
+        } else {
+            throw new StringFormatException("Command format isn't valid");
         }
     }
 }
